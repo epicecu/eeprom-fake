@@ -175,6 +175,7 @@ struct EEPROMClass {
 // including the trailing \0 to the eprom
 
 #if defined(__has_include) && __has_include(<Arduino.h>)
+#if defined(ENABLE_STRING_SUPPORT)
 
 template <>
 inline const String& EEPROMClass::put(int idx, const String& s)
@@ -210,6 +211,7 @@ inline String& EEPROMClass::get(int idx, String& s) {
     return s;
 }
 
+#endif
 #endif
 
 

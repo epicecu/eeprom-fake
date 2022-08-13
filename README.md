@@ -14,6 +14,7 @@ Used for moking the Arduino EEPROM library in Arduino based unit tests.
 
 Simply include the library under the native build option and test.
 
+Add the line to your test `#define ENABLE_STRING_SUPPORT` if you require the use of the real Arduino String class for the get/put functions.
 
 ## Exmaple
 
