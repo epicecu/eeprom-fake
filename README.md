@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="support/epicecu-eeprom-fake-logo" alt="EpicECU EEPROMFake" width="400" />
+<img src="support/epicecu-eeprom-fake-logo.png" alt="EpicECU EEPROMFake" width="400" />
 
 ##### An open source Table library supporting 2d and 3d modes. This is useful for lookups e.g. fuel, timing maps.
 
