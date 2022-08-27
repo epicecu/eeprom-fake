@@ -19,9 +19,9 @@
 #define SET_EEPROM_SIZE 1024
 #endif
 
-uint8_t eeprom_data[SET_EEPROM_SIZE] = { 0 };
+static uint8_t eeprom_data[SET_EEPROM_SIZE] = { 0 };
 
-uint8_t eeprom_read_byte(uint8_t* index)
+static uint8_t eeprom_read_byte(uint8_t* index)
 {
     uint8_t indexValue = 0;
     if (index != 0) {
@@ -30,7 +30,7 @@ uint8_t eeprom_read_byte(uint8_t* index)
     return eeprom_data[indexValue];
 }
 
-void eeprom_write_byte(uint8_t* index, uint8_t value)
+static void eeprom_write_byte(uint8_t* index, uint8_t value)
 {
     uint8_t indexValue = 0;
     if (index != 0) {
@@ -39,12 +39,12 @@ void eeprom_write_byte(uint8_t* index, uint8_t value)
     eeprom_data[indexValue] = value;
 }
 
-void eeprom_write_block(const uint8_t* data, uint8_t index, uint8_t size)
+static void eeprom_write_block(const uint8_t* data, uint8_t index, uint8_t size)
 {
     memcpy(eeprom_data+index, data, size);
 }
 
-void eeprom_read_block(uint8_t* data, uint8_t index, uint8_t size)
+static void eeprom_read_block(uint8_t* data, uint8_t index, uint8_t size)
 {
     memcpy(data, eeprom_data+index, size);
 }
